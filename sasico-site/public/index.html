@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manpower Services — Kochi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Manpower Services – Kochi</h1>
+    <p>Trusted manpower recruitment and staffing solutions.</p>
+  </header>
+
+  <section id="jobs-section">
+    <h2>Current Job Openings</h2>
+    <div id="jobs-container" class="grid"></div>
+  </section>
+
+  <section id="contact-section">
+    <h2>Contact Us</h2>
+    <p>Head Office: Kochi, Kerala</p>
+    <p>Email: <a href="mailto:contact@manpowerservices.com">contact@manpowerservices.com</a></p>
+    <p>Phone: +91 98765 43210</p>
+  </section>
+
+  <!-- Job Application Modal -->
+  <div id="form-modal" class="hidden modal">
+    <div class="modal-content">
+      <h3 id="job-title-heading"></h3>
+
+      <form id="application-form" enctype="multipart/form-data">
+        <label>Name</label>
+        <input type="text" name="name" required />
+
+        <label>Contact Number</label>
+        <input type="text" name="contact" required />
+
+        <label>Place of Origin</label>
+        <input type="text" name="origin" required />
+
+        <label>Upload CV (PDF or DOCX)</label>
+        <input type="file" name="cv" accept=".pdf,.doc,.docx" required />
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <button id="close-modal">Close</button>
+    </div>
+  </div>
+
+  <script>
+    const JOBS_JSON = "./jobs.json";
+
+    async function loadJobs() {
+      const data = await (await fetch(JOBS_JSON)).json();
+      const jobs = data.jobs;
+      const container = document.getElementById("jobs-container");
+
+      container.innerHTML = "";
+
+      jobs.forEach(job => {
+        const card = document.createElement("div");
+        card.className = "job-card";
+
+        card.innerHTML = `
+          <h3>${job.title}</h3>
+          <p><strong>Location:</strong> ${job.location}</p>
+          <p>${job.description}</p>
+          <p><strong>Openings:</strong> ${job.openings}</p>
+          <button onclick="openForm('${job.id}', '${job.title}')">Apply</button>
+        `;
+
+        container.appendChild(card);
+      });
+    }
+
+    function openForm(id, title) {
+      document.getElementById("form-modal").classList.remove("hidden");
+      document.getElementById("job-title-heading").innerText = "Apply for: " + title;
+    }
+
+    document.getElementById("close-modal").onclick = () => {
+      document.getElementById("form-modal").classList.add("hidden");
+    };
+
+    loadJobs();
+  </script>
+</body>
+</html>
