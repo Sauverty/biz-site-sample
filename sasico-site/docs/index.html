@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>P International Manpower Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- NAVBAR -->
+<!-- HEADER -->
+<header class="w-full bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+
+        <!-- LOGO / BRAND -->
+        <a href="index.html" class="font-bold text-xl text-gray-900">
+            P International Manpower Services
+        </a>
+
+        <!-- DESKTOP NAV -->
+        <nav class="hidden md:flex space-x-8 text-gray-700 font-medium">
+            <a href="index.html" class="hover:text-blue-600">Home</a>
+            <a href="about.html" class="hover:text-blue-600">About</a>
+            <a href="services.html" class="hover:text-blue-600">Services</a>
+            <a href="contact.html" class="hover:text-blue-600">Contact</a>
+        </nav>
+
+        <!-- MOBILE MENU BUTTON -->
+        <button id="mobileMenuButton" class="md:hidden focus:outline-none">
+            <svg class="w-7 h-7 text-gray-800" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </div>
+
+    <!-- MOBILE MENU PANEL -->
+    <div id="mobileMenuPanel" class="hidden md:hidden bg-white border-t border-gray-100">
+        <nav class="flex flex-col px-4 py-3 space-y-4 text-gray-700 font-medium">
+            <a href="index.html" class="hover:text-blue-600">Home</a>
+            <a href="about.html" class="hover:text-blue-600">About</a>
+            <a href="services.html" class="hover:text-blue-600">Services</a>
+            <a href="contact.html" class="hover:text-blue-600">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<!-- MOBILE MENU TOGGLE SCRIPT -->
+<script>
+    const btn = document.getElementById("mobileMenuButton");
+    const panel = document.getElementById("mobileMenuPanel");
+
+    btn.addEventListener("click", () => {
+        panel.classList.toggle("hidden");
+    });
+</script>
+
+
+    <!-- HERO SECTION -->
+    <section class="bg-blue-600 text-white py-24 px-4 text-center">
+        <h2 class="text-4xl font-bold mb-4">Reliable Manpower Solutions for India and Overseas</h2>
+        <p class="text-lg mb-6">Connecting skilled talent with trusted employers through transparent and efficient recruitment.</p>
+        <div class="flex justify-center space-x-4">
+            <a href="#openings" class="bg-white text-blue-600 px-6 py-3 rounded font-semibold shadow">View Openings</a>
+            <a href="#contact" class="bg-blue-800 px-6 py-3 rounded font-semibold shadow">Contact Head Office</a>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="max-w-7xl mx-auto px-4 py-16">
+        <h3 class="text-3xl font-bold text-center mb-12">Our Services</h3>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 shadow rounded">
+                <h4 class="font-bold text-lg mb-2">Domestic Recruitment</h4>
+                <p>End-to-end staffing solutions for companies across India.</p>
+            </div>
+
+            <div class="bg-white p-6 shadow rounded">
+                <h4 class="font-bold text-lg mb-2">Overseas Job Assistance</h4>
+                <p>Verified and compliant overseas placements with approved employers.</p>
+            </div>
+
+            <div class="bg-white p-6 shadow rounded">
+                <h4 class="font-bold text-lg mb-2">Documentation & Visa Support</h4>
+                <p>Professional support for visa filing, medicals, and clearance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- OPENINGS SECTION -->
+    <section id="openings" class="bg-gray-100 py-16">
+        <h3 class="text-3xl font-bold text-center mb-12">Current Job Openings</h3>
+
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8">
+
+            <!-- CARD 1 -->
+            <div class="bg-white p-6 shadow rounded">
+                <h4 class="text-xl font-bold text-blue-600 mb-1">UAE</h4>
+                <p class="text-gray-700 font-semibold">Alpha Gulf Contracting</p>
+
+                <ul class="mt-4 text-sm space-y-1">
+                    <li><strong>Position:</strong> Electrician</li>
+                    <li><strong>Salary:</strong> $600–$750</li>
+                    <li>Accommodation, Food, Transportation Included</li>
+                    <li>9hr Duty + OT</li>
+                    <li><strong>Contract:</strong> 2 Years</li>
+                </ul>
+
+                <button onclick="openForm('Electrician - UAE')"
+                    class="mt-4 bg-blue-600 text-white w-full py-2 rounded">Apply Now</button>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="bg-white p-6 shadow rounded">
+                <h4 class="text-xl font-bold text-blue-600 mb-1">Qatar</h4>
+                <p class="text-gray-700 font-semibold">Qatar Steel Works</p>
+
+                <ul class="mt-4 text-sm space-y-1">
+                    <li><strong>Position:</strong> Welder (MIG/TIG)</li>
+                    <li><strong>Salary:</strong> $700–$850</li>
+                    <li>Accommodation, Food, Transportation Included</li>
+                    <li>9hr Duty + OT</li>
+                    <li><strong>Contract:</strong> 3 Years</li>
+                </ul>
+
+                <button onclick="openForm('Welder - Qatar')"
+                    class="mt-4 bg-blue-600 text-white w-full py-2 rounded">Apply Now</button>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="bg-white p-6 shadow rounded">
+                <h4 class="text-xl font-bold text-blue-600 mb-1">Saudi Arabia</h4>
+                <p class="text-gray-700 font-semibold">Saudi National Services</p>
+
+                <ul class="mt-4 text-sm space-y-1">
+                    <li><strong>Position:</strong> Housekeeping Staff</li>
+                    <li><strong>Salary:</strong> $450–$600</li>
+                    <li>Accommodation, Food, Transportation Included</li>
+                    <li>9hr Duty + OT</li>
+                    <li><strong>Contract:</strong> 2 Years</li>
+                </ul>
+
+                <button onclick="openForm('Housekeeping - Saudi Arabia')"
+                    class="mt-4 bg-blue-600 text-white w-full py-2 rounded">Apply Now</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- APPLY FORM MODAL -->
+    <div id="formModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+        <div class="bg-white w-full max-w-lg p-6 rounded shadow-lg">
+            <h3 class="text-2xl font-bold mb-4">Apply for <span id="jobTitle"></span></h3>
+
+            <form action="https://formspree.io/f/yourFormID" method="POST" enctype="multipart/form-data" class="space-y-4">
+
+                <input type="hidden" name="Job Title" id="jobInput">
+
+                <input name="Name" required placeholder="Full Name" class="w-full p-2 border rounded" />
+                <input name="Date of Birth" type="date" required class="w-full p-2 border rounded" />
+                <input name="Place" required placeholder="Place" class="w-full p-2 border rounded" />
+                <input name="WhatsApp Number" required placeholder="WhatsApp Number" class="w-full p-2 border rounded" />
+                <input name="Experience (Years)" required placeholder="Experience (Years)" class="w-full p-2 border rounded" />
+                <input name="Email" type="email" required placeholder="Email Address" class="w-full p-2 border rounded" />
+
+                <label class="block text-sm font-semibold">Upload CV (PDF/DOCX)</label>
+                <input name="CV" type="file" accept=".pdf,.doc,.docx" required class="w-full" />
+
+                <button class="bg-blue-600 text-white w-full py-2 rounded">Submit Application</button>
+            </form>
+
+            <button onclick="closeForm()" class="mt-4 text-center w-full text-red-600 font-semibold">Close</button>
+        </div>
+    </div>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="max-w-7xl mx-auto px-4 py-16">
+        <h3 class="text-3xl font-bold text-center mb-8">Contact Us</h3>
+
+        <div class="bg-white p-6 shadow rounded text-center space-y-2">
+            <p><strong>Head Office:</strong> 1A, ABC Road, Padma, Ernakulam, Kerala 682024, India</p>
+            <p><strong>Email:</strong> company@exampledomain.com</p>
+            <p><strong>Phone:</strong> 9876543210</p>
+            <p><strong>WhatsApp:</strong> 9876543210</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+<footer class="bg-gray-900 text-gray-300 py-12 mt-16">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+
+    <div>
+      <h3 class="font-bold text-lg mb-3">P International Manpower Services</h3>
+      <p>1A, ABC Road, Padma, Ernakulam,<br> Kerala 682024, India</p>
+      <p class="mt-2">Email: company@exampledomain.com</p>
+      <p>Phone: 9876543210</p>
+      <p>WhatsApp: 9876543210</p>
+    </div>
+
+    <div>
+      <h3 class="font-bold text-lg mb-3">Quick Links</h3>
+      <ul class="space-y-2">
+        <li><a href="index.html" class="hover:text-white">Home</a></li>
+        <li><a href="openings.html" class="hover:text-white">Openings</a></li>
+        <li><a href="services.html" class="hover:text-white">Services</a></li>
+        <li><a href="about.html" class="hover:text-white">About</a></li>
+        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="font-bold text-lg mb-3">Legal</h3>
+      <ul class="space-y-2">
+        <li><a href="privacy-policy.html" class="hover:text-white">Privacy Policy</a></li>
+        <li><a href="terms.html" class="hover:text-white">Terms & Conditions</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="text-center text-gray-500 mt-10 text-sm">
+    © 2025 P International Manpower Services. All Rights Reserved.
+  </div>
+</footer>
+
+
+    <!-- JS -->
+    <script>
+        function openForm(job) {
+            document.getElementById("jobTitle").innerText = job;
+            document.getElementById("jobInput").value = job;
+            document.getElementById("formModal").classList.remove("hidden");
+        }
+
+        function closeForm() {
+            document.getElementById("formModal").classList.add("hidden");
+        }
+    </script>
+
+</body>
+</html>
