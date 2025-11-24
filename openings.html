@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Openings | P International Manpower Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+<header class="bg-white shadow-md sticky top-0 z-50">
+  <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="index.html" class="text-xl font-bold">P International</a>
+    <button class="md:hidden" onclick="toggleMenu()">☰</button>
+    <div id="menu" class="space-x-6 hidden md:block">
+      <a href="index.html">Home</a>
+      <a href="openings.html" class="font-semibold text-blue-600">Openings</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<section class="bg-blue-600 text-white py-16 text-center">
+  <h1 class="text-4xl font-bold">Current Job Openings</h1>
+</section>
+
+<section class="max-w-7xl mx-auto px-6 py-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+  <!-- Job Card 1 -->
+  <div class="bg-white p-6 rounded-xl shadow-md">
+    <h3 class="text-xl font-bold mb-2">🇦🇪 United Arab Emirates</h3>
+    <p class="text-gray-700">ABC Group</p>
+    <p class="font-semibold mt-2">Position: Electrician</p>
+    <p>Salary: 1200–1600 USD</p>
+    <p>Accommodation, Food, Transport Included</p>
+    <p>9hr duty + OT</p>
+    <p>Contract: 2 years</p>
+    <a href="apply.html" class="block bg-blue-600 text-white text-center mt-4 py-2 rounded-lg">Apply Now</a>
+  </div>
+
+  <!-- Job Card 2 -->
+  <div class="bg-white p-6 rounded-xl shadow-md">
+    <h3 class="text-xl font-bold mb-2">🇸🇦 Saudi Arabia</h3>
+    <p class="text-gray-700">GulfTech Services</p>
+    <p class="font-semibold mt-2">Position: HVAC Technician</p>
+    <p>Salary: 1500–1900 USD</p>
+    <p>Accommodation, Food, Transport Included</p>
+    <p>9hr duty + OT</p>
+    <p>Contract: 3 years</p>
+    <a href="apply.html" class="block bg-blue-600 text-white text-center mt-4 py-2 rounded-lg">Apply Now</a>
+  </div>
+
+  <!-- Job Card 3 -->
+  <div class="bg-white p-6 rounded-xl shadow-md">
+    <h3 class="text-xl font-bold mb-2">🇶🇦 Qatar</h3>
+    <p class="text-gray-700">QatarBuild Co.</p>
+    <p class="font-semibold mt-2">Position: Plumber</p>
+    <p>Salary: 1100–1500 USD</p>
+    <p>Accommodation, Food, Transport Included</p>
+    <p>9hr duty + OT</p>
+    <p>Contract: 2 years</p>
+    <a href="apply.html" class="block bg-blue-600 text-white text-center mt-4 py-2 rounded-lg">Apply Now</a>
+  </div>
+
+</section>
+
+<script>
+function toggleMenu() {
+  document.getElementById('menu').classList.toggle('hidden');
+}
+</script>
+
+</body>
+</html>
